@@ -20,7 +20,7 @@
 |mail|string|null: false|
 
 ### Association
-- has_many :groupes,through: groups_users
+- has_many :groups,through: :groups_users
 - has_many :messages
 - has_many :groups_users
 
@@ -28,10 +28,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-name chat-space
+
+chat-space
 
 ### Association
-- has_many :users,through: groups_users
+- has_many :users,through: :groups_users
 - has_many :messages
 - has_many :groups_users
 
@@ -40,12 +41,11 @@ name chat-space
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|comment_id|text|null: false|
-|tweet|string|null: false|
-|image|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|text|null: false, foreign_key: true|
+|tweet|string
+|image|string
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :member
