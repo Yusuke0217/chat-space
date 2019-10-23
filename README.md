@@ -5,8 +5,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -29,7 +29,7 @@
 |Column|Type|Options|
 |------|----|-------|
 
-chat-space
+|chat-space|srting|null: false|
 
 ### Association
 - has_many :users,through: :groups_users
@@ -41,8 +41,8 @@ chat-space
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|text|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 |tweet|string
 |image|string
 
