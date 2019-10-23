@@ -29,7 +29,7 @@
 |Column|Type|Options|
 |------|----|-------|
 
-|chat-space|srting|null: false|
+|name|srting|null: false|
 
 ### Association
 - has_many :users,through: :groups_users
