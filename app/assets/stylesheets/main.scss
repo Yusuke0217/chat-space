@@ -23,6 +23,7 @@
         height: 100px;
         padding: 0 20px;
         align-items: center;
+        display: flex;
 
         &__box {
           font-weight: bold;
@@ -30,26 +31,41 @@
           justify-content: space-between;
           width: 100%;
 
-          &__user-name {
-            color: red;
+
+          &__user--name {
+            color: white;
             display: block;
+            line-height: 100px;
           }
 
 
           &__menu {
-              list-style: none;
-              margin-block-start: 1em;
-              margin-block-end: 1em;
-              margin-inline-start: 0px;
-              margin-inline-end: 0px;
-              padding-inline-start: 40px;
+              margin-block-start: 35px;
+              display: flex;
 
-            &__new-group {
 
+
+            
+
+
+            &__new--group {
+              height: 0;
+
+
+
+
+              i {
+                color: white;
+                padding: 4.8px;
+
+              }
+                
+            
             }
 
-            &__edit-user {
-
+            &__edit--user {
+              font-weight: bold;
+              
             }
 
               
@@ -83,14 +99,11 @@
             font: 11px bold #ffffff;
 
           }
-
-
-
-
         }
-
       }
     }
+
+
 
     .main-content {
       box-sizing: border-box;
@@ -98,15 +111,23 @@
       
 
 
-
       .main-top {
         width: 100%;
         height: 100px;
         background-color: white;
-        padding: 46px 40px;
+        padding: 0 40px;
 
 
         &__left {
+          margin-top: 35px;
+
+          &__current-g {
+
+          }
+
+          &__mem-list {
+            
+          }
 
 
           &__edit-btn {
