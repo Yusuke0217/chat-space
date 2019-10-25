@@ -10,16 +10,50 @@
       .side-content
         .side-top
           .side-top__box
-            .side-top__box__user-name
-              %p test-user
+            %p.side-top__box__user-name
+              mac
+            %ul.side-top__box__menu
+              %li.side-top__box__menu__new-group
+                %a(href="")
+                  %i.fa.fa-edit
+            %ul.side-top__box__menu
+              %li.side-top__box__menu__edit-user
+                %a(href="")
+                  %i.fa.fa-cog
+
 
         .side-bottom
-          %p sample-group
-          %p example
+          %a(href="")
+            .side-group
+              %p.side-group__group-name
+                ppp
+              %p.side-group__latest-message
+                Airbnbnbnbn
+
+
+
+
       .main-content
         .main-top
-          %p Tweet
+          .main-top__left
+            %h2.main-top__left__current-g 
+            %ul.main-top__left__mem-list
+          %a(href="")
+            .main-top__edit-btn
+              Edit
+            
         .main-middle
-          %p Instagram
+          .main-message
+            .main-message__upper-info
+            %p.main-message__talker
+            %p.main-message__date
+              %p Instagram
+            %p.message-text
+
+
         .main-bottom
+          .new_message#new_message
+
+            .input-box
+            %input
           %p Why 
