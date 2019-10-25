@@ -43,26 +43,27 @@
             %h2.main-top__left__current-g 
               prrrr
             %ul.main-top__left__mem-list
-              member
+              member : 
               %li.main-top__left__mem-list__mem
                 wwww
           %a(href="")
-            .main-top__edit-btn
-              Edit
-            
+            .main-top__edit-btn Edit
+
         .main-middle
           .main-message
             .main-message__upper-info
-              %p.main-message__upper-info__talker
-              %p.main-message__upper-info__date
-
-            %p.message-text
-              lgtm
-
+              %p.main-message__upper-info__talker 
+                James : 
+              %p.main-message__upper-info__date 
+                2102: 12:45
+            %p.message__text 
+              okokkkkokokko
 
         .main-bottom
-          .new_message#new_message
-
+          %form#new_message.new_message
             .input-box
-            %input
-          %p Why 
+              %input#message_content.input-box__text
+              %label.input-box__image
+                %i.fa.fa-image
+                %input
+            %input.submit-btn

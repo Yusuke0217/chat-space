@@ -3,20 +3,15 @@
   text-align: center;
   box-sizing: border-box;
 }
-
 .content {
-
   height: 100vh;
   width: 100%;
   display: flex;
   box-sizing: border-box;
-
     .side-content {
       background-color: #253141;
       color: #ffffff;
       width: 300px;
-      
-
       .side-top {
         font: 16px bold #ffffff;
         background-color: #253141;
@@ -24,80 +19,48 @@
         padding: 0 20px;
         align-items: center;
         display: flex;
-
         &__box {
           font-weight: bold;
           display: flex;
           justify-content: space-between;
           width: 100%;
-
-
           &__user--name {
             color: white;
             display: block;
             line-height: 100px;
           }
-
-
           &__menu {
               margin-block-start: 35px;
               display: flex;
-
-
-
-            
-
-
             &__new--group {
               height: 0;
-
-
-
-
               i {
                 color: white;
                 padding: 4.8px;
-
               }
-                
-            
             }
-
             &__edit--user {
               font-weight: bold;
-              
             }
-
-              
-            }
-
-
+          }
         }
-
       }
-
       .side-bottom {
         background-color: #2f3e51;
         color: #ffffff;
         height: calc(100vh - 100px);
         padding: 20px 20px 0px;
-
-
         .side-group {
           color: #fff;
           margin-bottom: 40px;
           padding: 0;
-
           &__group-name {
             color: aqua;
             margin-bottom: 5px;
             font: 15px bold #ffffff;
-
           }
-
           &__latest-message {
             font: 11px bold #ffffff;
-
           }
         }
       }
@@ -108,57 +71,76 @@
     .main-content {
       box-sizing: border-box;
       width: calc(100vw - 300px);
-      
-
-
       .main-top {
         width: 100%;
         height: 100px;
         background-color: white;
         padding: 0 40px;
-
-
+        display: flex;
+        border-bottom: solid 1px black;
         &__left {
           margin-top: 35px;
-
           &__current-g {
-
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: normal;
           }
-
           &__mem-list {
-            
+            font-size: 12px;
+            display: flex;
+            color: #999999;
+            &__mem {
+              display: list-item;
+            }
           }
-
-
-          &__edit-btn {
-            color: darkblue;
-
+          .main-top__edit-btn {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            margin-top: 30px;
+            border: solid 1px palevioletred;
+            right: 40px;
           }
-
-
         }
-
       }
-
-
       .main-middle {
-        width: 100%;
         height: calc(100vh - 190px);
         padding: 46px 40px;
-        background-color: gray;
+        background-color: #fafaff;
+          .main-message {
+            padding-bottom: 40px;
+            &__upper-info {
+              display: flex;
+              margin-bottom: 10px;
+              &__talker {
+                color: palevioletred;
+                font-size: 16px;
+                font-weight: bold;
+              }
+              &__date {
+                color: #999999;
+                font-size: 12px;
+                margin-left: 10px;
+
+              }
+            }
+            .message__text {
+              color: peru;
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
       }
-
-
       .main-bottom {
-        width: 100%;
         height: 90px;
-        background-color: brown;
+        background-color: #ddd;
         padding: 20px 40px;
-        
+
       }
-
-
-
     }
-
 }
+
+
+
+
