@@ -60,7 +60,9 @@
             font: 15px bold #ffffff;
           }
           &__latest-message {
-            font: 11px bold #ffffff;
+            font-size: 11px;
+            font-weight: bold; 
+            color: #ffffff;
           }
         }
       }
