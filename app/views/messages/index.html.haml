@@ -60,10 +60,12 @@
               okokkkkokokko
 
         .main-bottom
-          %form#new_message.new_message
+          %form#new_message
             .input-box
-              %input#message_content.input-box__text
+              %input#message_content.input-box__text{name: "message[content]",   placeholder: "type a message", type: "text"}/
               %label.input-box__image
                 %i.fa.fa-image
-                %input
+                
             %input.submit-btn
+
+              
