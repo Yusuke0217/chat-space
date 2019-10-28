@@ -32,16 +32,20 @@
           &__menu {
               margin-block-start: 35px;
               display: flex;
-            &__new--group {
-              height: 0;
-              i {
-                color: white;
-                padding: 4.8px;
+              a {
+                margin-left: 0.3rem;
+                color: #fff;
+                &__new--group {
+                  height: 0;
+                  i {
+                    color: white;
+                    padding: 4.8px;
+                  }
+                }
               }
-            }
-            &__edit--user {
-              font-weight: bold;
-            }
+                &__edit--user {
+                  font-weight: bold;
+                }
           }
         }
       }
