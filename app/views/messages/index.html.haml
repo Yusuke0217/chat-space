@@ -1,0 +1,70 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+
+    .header
+      グループを作成しました
+    .content
+      .side-content
+        .side-top
+          .side-top__box
+            %p.side-top__box__user--name
+              mac
+            %ul.side-top__box__menu
+              %li
+                =link_to "#", class: ".side-top__box__menu__new--group" do
+                  %i.fa.fa-edit
+                  %span<>
+              %li
+                =link_to "#", class: ".side-top__box__menu__new--group" do
+                  %i.fa.fa-cog
+                  %span<>
+                  
+
+
+        .side-bottom
+          .side-group
+            %p.side-group__group-name
+              ppp
+            %p.side-group__latest-message
+              Airbnbnbnbn
+
+
+
+
+      .main-content
+        .main-top
+          .main-top__left
+            %h2.main-top__left__current-g 
+              prrrr
+            %ul.main-top__left__mem-list
+              member : 
+              %li.main-top__left__mem-list__mem
+                wwww
+          %a(href="")
+            .main-top__left__edit-btn
+              Edit
+
+        .main-middle
+          .main-message
+            .main-message__upper-info
+              %p.main-message__upper-info__talker 
+                James : 
+              %p.main-message__upper-info__date 
+                2102: 12:45
+            %p.message__text 
+              okokkkkokokko
+
+        .main-bottom
+          %form#new_message
+            .input-box
+              %input#message_content.input-box__text{name: "message[content]",   placeholder: "type a message", type: "text"}/
+              %label.input-box__image
+                %i.fa.fa-image
+                
+            %input.submit-btn{input: "Send", name: "commit", type: "submit", value: "Send"}
+
+
+              
