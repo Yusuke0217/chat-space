@@ -11,14 +11,14 @@
         .side-top
           .side-top__box
             %p.side-top__box__user--name
-              mac
+              = current_user.name
             %ul.side-top__box__menu
               %li
                 =link_to "#", class: ".side-top__box__menu__new--group" do
                   %i.fa.fa-edit
                   %span<>
               %li
-                =link_to "#", class: ".side-top__box__menu__new--group" do
+                = link_to edit_user_path(current_user) do
                   %i.fa.fa-cog
                   %span<>
                   
