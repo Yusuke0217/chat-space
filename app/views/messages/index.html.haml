@@ -25,11 +25,13 @@
 
 
         .side-bottom
-          .side-group
-            %p.side-group__group-name
-              ppp
-            %p.side-group__latest-message
-              Airbnbnbnbn
+          - current_user.groups.each do |group|
+            .side-group
+              = link_to '#' do
+                %p.side-group__group-name
+                  = group.name
+                %p.side-group__latest-message
+                  Airbnbnbnbn
 
 
 
