@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
 
   def new
+    render "group/new"
   end
 
   def create
