@@ -14,7 +14,7 @@
               = current_user.name
             %ul.side-top__box__menu
               %li
-                =link_to "#", class: ".side-top__box__menu__new--group" do
+                =link_to new_group_path do
                   %i.fa.fa-edit
                   %span<>
               %li
@@ -25,11 +25,13 @@
 
 
         .side-bottom
-          .side-group
-            %p.side-group__group-name
-              ppp
-            %p.side-group__latest-message
-              Airbnbnbnbn
+          - current_user.groups.each do |group|
+            .side-group
+              = link_to group_messages_path(group) do
+                %p.side-group__group-name
+                  = group.name
+                %p.side-group__latest-message
+                  Airbnbnbnbn
 
 
 
