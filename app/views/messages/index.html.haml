@@ -49,15 +49,18 @@
             .main-top__left__edit-btn
               Edit
 
+        -# .main-middle
+        -#   .main-message
+        -#     .main-message__upper-info
+        -#       %p.main-message__upper-info__talker 
+        -#         James : 
+        -#       %p.main-message__upper-info__date 
+        -#         2102: 12:45
+        -#     %p.message__text 
+        -#       okokkkkokokko
+
         .main-middle
-          .main-message
-            .main-message__upper-info
-              %p.main-message__upper-info__talker 
-                James : 
-              %p.main-message__upper-info__date 
-                2102: 12:45
-            %p.message__text 
-              okokkkkokokko
+          = render @messages
 
         .main-bottom
           = form_for [@group, @message] do |f|
@@ -67,6 +70,6 @@
                 %i.fa.fa-image
                 = f.file_field :image, class: 'hidden'
                 
-            = f.submit 'Send', class: 'input__submit-btn'
+            = f.submit 'Send', class: 'input-submit-btn'
 
               
