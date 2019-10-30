@@ -28,7 +28,3 @@ class MessagesController < ApplicationController
   end
 end
 
-
-
-/groups/:group_id/
-/groups/7
