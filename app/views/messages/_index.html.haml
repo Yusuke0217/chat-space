@@ -60,13 +60,13 @@
               okokkkkokokko
 
         .main-bottom
-          %form#new_message
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'new__message', placeholder: 'type a message'
             .input-box
-              %input#message_content.input-box__text{name: "message[content]",   placeholder: "type a message", type: "text"}/
-              %label.input-box__image
+              = f.label :image, class: 'input__box__image' do
                 %i.fa.fa-image
+                = f.file_field :image, class: 'hidden'
                 
-            %input.submit-btn{input: "Send", name: "commit", type: "submit", value: "Send"}
-
+            = f.submit 'Send', class: 'input__submit-btn'
 
               
