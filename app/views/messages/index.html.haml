@@ -31,7 +31,7 @@
                 %p.side-group__group-name
                   = group.name
                 %p.side-group__latest-message
-                  Airbnbnbnbn
+                  = group.show_last_message
 
 
 
@@ -40,11 +40,11 @@
         .main-top
           .main-top__left
             %h2.main-top__left__current-g 
-              teotfw
+              = @group.name
             %ul.main-top__left__mem-list
-              member : 
+              Member :　
               %li.main-top__left__mem-list__mem
-                wwww
+                = current_user.name
           %a(href="")
             .main-top__left__edit-btn
               Edit
