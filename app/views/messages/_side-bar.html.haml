@@ -1,0 +1,29 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    .header
+    .content
+      .side-content
+        .side-top
+          .side-top__box
+            %p.side-top__box__user--name
+              = current_user.name
+            %ul.side-top__box__menu
+              %li
+                =link_to new_group_path do
+                  %i.fa.fa-edit
+                  %span<>
+              %li
+                = link_to edit_user_path(current_user) do
+                  %i.fa.fa-cog
+                  %span<>
+        .side-bottom
+          - current_user.groups.each do |group|
+            .side-group
+              = link_to group_messages_path(group) do
+                %p.side-group__group-name
+                  = group.name
+                %p.side-group__latest-message
+                  = group.show_end_message

@@ -31,7 +31,7 @@
                 %p.side-group__group-name
                   = group.name
                 %p.side-group__latest-message
-                  Airbnbnbnbn
+                  = group.show_last_message
 
 
 
@@ -40,33 +40,37 @@
         .main-top
           .main-top__left
             %h2.main-top__left__current-g 
-              prrrr
+              = @group.name
             %ul.main-top__left__mem-list
-              member : 
+              Member :　
               %li.main-top__left__mem-list__mem
-                wwww
+                = current_user.name
           %a(href="")
             .main-top__left__edit-btn
               Edit
 
+        -# .main-middle
+        -#   .main-message
+        -#     .main-message__upper-info
+        -#       %p.main-message__upper-info__talker 
+        -#         James : 
+        -#       %p.main-message__upper-info__date 
+        -#         2102: 12:45
+        -#     %p.message__text 
+        -#       okokkkkokokko
+
         .main-middle
-          .main-message
-            .main-message__upper-info
-              %p.main-message__upper-info__talker 
-                James : 
-              %p.main-message__upper-info__date 
-                2102: 12:45
-            %p.message__text 
-              okokkkkokokko
+          = render @messages
+
 
         .main-bottom
-          %form#new_message
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'new_message', placeholder: 'type a message'
             .input-box
-              %input#message_content.input-box__text{name: "message[content]",   placeholder: "type a message", type: "text"}/
-              %label.input-box__image
+              = f.label :image, class: 'input-box__image' do
                 %i.fa.fa-image
+                = f.file_field :image, class: 'hidden'
                 
-            %input.submit-btn{input: "Send", name: "commit", type: "submit", value: "Send"}
-
+            = f.submit 'Send', class: 'input.submit-btn'
 
               

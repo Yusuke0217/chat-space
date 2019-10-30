@@ -1,0 +1,14 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    .main-bottom
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'new_message', placeholder: 'type a message'
+          .input-box
+            = f.label :image, class: 'input-box__image' do
+              %i.fa.fa-image
+              = f.file_field :image, class: 'hidden'
+                
+          = f.submit 'Send', class: 'input.submit-btn'
