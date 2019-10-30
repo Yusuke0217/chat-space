@@ -40,7 +40,7 @@
         .main-top
           .main-top__left
             %h2.main-top__left__current-g 
-              prrrr
+              teotfw
             %ul.main-top__left__mem-list
               member : 
               %li.main-top__left__mem-list__mem
@@ -62,14 +62,15 @@
         .main-middle
           = render @messages
 
+
         .main-bottom
           = form_for [@group, @message] do |f|
-            = f.text_field :content, class: 'new__message', placeholder: 'type a message'
+            = f.text_field :content, class: 'new_message', placeholder: 'type a message'
             .input-box
-              = f.label :image, class: 'input__box__image' do
+              = f.label :image, class: 'input-box__image' do
                 %i.fa.fa-image
                 = f.file_field :image, class: 'hidden'
                 
-            = f.submit 'Send', class: 'input-submit-btn'
+            = f.submit 'Send', class: 'input.submit-btn'
 
               
