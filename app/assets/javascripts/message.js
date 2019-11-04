@@ -38,9 +38,15 @@ $(function() {
       $('.main-middle').append(html);
   // メッセージコンテントの中身を空にする
       $('#message_content').val('');
+  // メッセージを追加したら、メッセージの最下部まで自動でスクロールするようにする
+      $('.main-middle').animate({ scrollTop: $('.main-middle')[0].scrollHeight});
+      return false;
     })
     .fail(function() {
       alert('エラーが発生したため送信できませんでした');
+    })
+    .always(function(data){
+      $('.input-submit-btn').removeAttr('disabled');
     })
   })
 })

@@ -115,6 +115,7 @@
         height: calc(100vh - 190px);
         padding: 46px 40px;
         background-color: #fafaff;
+        overflow: scroll;
           .main-message {
             padding-bottom: 40px;
             &__upper-info {
