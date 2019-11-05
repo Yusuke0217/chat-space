@@ -24,12 +24,19 @@ $(function() {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
       <p class="chat-group-user__name">${name}</p>
+      <input value="${id}" name="group[user_ids][]" type="hidden" id="group_user_ids_${id}" />
       <div class="chat-group-user__btn--remove chat-group-user__btn" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>`;
     // $(".js-chat-member").append(html);
     $(".js-add-user").append(html);
-
   } 
+
+
+  function addMember(userid) {
+    let html = `<input value="${userid}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userid}" />`;
+    $(`#${userid}`).append(html);
+  }
+
 
   // ここより上はテンプレートリテラル
 
@@ -74,6 +81,9 @@ $(function() {
     let uid = $(this).data("user-id");
     $(this).parent().remove();
     addDeleteUser(uname, uid);
+    addMember(userid)
   });
-
+  $(document).on("click", ".chat-group-user__btn--remove", function() {
+    $(this).parent().remove();
+  });
 });
