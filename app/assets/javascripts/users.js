@@ -22,11 +22,13 @@ $(function() {
 
   function addDeleteUser(name, id) {
     let html = `
-    <div class="ChatMember clearfix" id="${id}">
-      <p class="ChatMember__name">${name}</p>
-      <div class="ChatMember__remove ChatMember__button" data-user-id="${id}" data-user-name="${name}">削除</div>
+    <div class="chat-group-user clearfix" id="${id}">
+      <p class="chat-group-user__name">${name}</p>
+      <div class="chat-group-user__btn--remove chat-group-user__btn" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>`;
-    $(".ChatMembers").append(html);
+    // $(".js-chat-member").append(html);
+    $(".js-add-user").append(html);
+
   } 
 
   // ここより上はテンプレートリテラル
@@ -71,6 +73,7 @@ $(function() {
     let uname = $(this).data("user-name");
     let uid = $(this).data("user-id");
     $(this).parent().remove();
+    addDeleteUser(uname, uid);
   });
 
 });
