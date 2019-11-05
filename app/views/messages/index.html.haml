@@ -42,10 +42,13 @@
             %h2.main-top__left__current-g 
               = @group.name
             %ul.main-top__left__mem-list
-              Member :　
+              Member : 
               %li.main-top__left__mem-list__mem
-                = current_user.name
-          %a(href="")
+                -# = current_user.name
+                - @group.users.each do |user|
+                  = user.name
+
+          = link_to edit_group_path(@group) do
             .main-top__left__edit-btn
               Edit
 
