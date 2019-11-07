@@ -3,7 +3,8 @@
   %head
     %meta{charset: "utf-8"}
   %body
-    .main-message
+    //jbuilderで記載したmessage.idが使えるようカスタムデータ属性を付与。
+    .main-message{"data-message-id": "#{message.id}"}
       .main-message__upper-info
         %p.main-message__upper-info__talker 
           = message.user.name
