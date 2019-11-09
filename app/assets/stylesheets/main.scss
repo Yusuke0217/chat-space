@@ -1,3 +1,9 @@
+body {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .header {
   background-color: #38aef0;
   text-align: center;
@@ -54,6 +60,7 @@
         color: #ffffff;
         height: calc(100vh - 100px);
         padding: 20px 20px 0px;
+        overflow: scroll;
         .side-group {
           color: #fff;
           margin-bottom: 40px;
