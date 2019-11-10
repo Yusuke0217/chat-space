@@ -36,14 +36,15 @@ body {
             line-height: 100px;
           }
           &__menu {
-              margin-block-start: 35px;
+              margin-block-start: 40px;
               display: flex;
               a {
                 margin-left: 0.3rem;
                 color: #fff;
+                font-size: 16px;
                 &__new--group {
                   height: 0;
-                  i {
+                  i.fa.fa-cog {
                     color: white;
                     padding: 4.8px;
                   }
