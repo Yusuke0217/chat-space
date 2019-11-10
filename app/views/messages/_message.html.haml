@@ -9,7 +9,7 @@
         %p.main-message__upper-info__talker 
           = message.user.name
         %p.main-message__upper-info__date 
-          = message.created_at.strftime("%Y/%m/%d %H:%M")
+          = message.created_at.strftime('%Y-%m-%d %H:%M')
       %p.message__text 
         - if message.content.present?
           %p.message__text__content
