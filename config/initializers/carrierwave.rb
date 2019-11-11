@@ -14,4 +14,5 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'dolcebucket'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/dolcebucket'
+  # config.asset_host = 'https://dolcebucket.s3-ap-northeast-1.amazonaws.com'
 end
