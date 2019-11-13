@@ -11,14 +11,14 @@ $(function() {
             $("#user-search-result").append(html);
   }
 
-  // function appendErrMsgToHTML(user) {
-  //   var html = `
-  //         <div class="chat-group-user clearfix">
-  //           <p class="chat-group-user__name">${user}</p>
-  //         </div>
-  //         `;
-  //         $("#user-search-result").append(html);
-  // }
+  function appendErrMsgToHTML() {
+    var html = `
+          <div class="chat-group-user clearfix">
+            <p class="chat-group-user__name">ユーザーが見つかりません</p>
+          </div>
+          `;
+          $("#user-search-result").append(html);
+  }
 
   function addDeleteUser(name, id) {
     let html = `
@@ -54,19 +54,20 @@ $(function() {
     })
       .done(function(users) { 
         // usersにjson形式のuser変数が代入される。複数形なので配列型で入ってくる
+        $('#user-search-result').empty();
         
         // if (input.length === 0) {  // フォームの文字列長さが0であれば、インクリメンタルサーチ結果を表示しないようにする
         //   $('#user-search-result').empty();
         // }
         
-        if (input.length !== 0) { // 値が等しくないもしくは型が等しくなければtrueを返す。
-          $('#user-search-result').empty();
+        if (users.length !== 0) { // user達の数が0では無い時
           users.forEach(function(user){ // users情報をひとつずつとりだしてuserに代入
             appendUser(user)
           });
-        }
-        else {
-          appendErrMsgToHTML("一致するユーザーが見つかりません");
+        } else if (input.length == 0) {
+          return false;
+        }else {
+          appendErrMsgToHTML();
         }
       })
       .fail(function() {
