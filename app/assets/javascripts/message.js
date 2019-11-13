@@ -73,7 +73,7 @@ $(function() {
           insertHTML = buildHTML(message);
           $('.main-middle').append(insertHTML);//メッセージを追加
         })
-        $('.main-middle').animate({sctollTop: $('.main-middle')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
+        $('.main-middle').animate({ scrollTop: $('.main-middle')[0].scrollHeight}, 'fast');//最新のメッセージが一番下に表示されようにスクロールする。
       })
       .fail(function() {
         alert('失敗しました');
